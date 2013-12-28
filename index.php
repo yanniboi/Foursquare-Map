@@ -8,7 +8,7 @@
 include 'includes/functions.php';
 
 // EDIT THIS LINK TO USE YOUR API KEY!!!
-$url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=GKGNWQ525WFTXSHT2C0ZITHMWIVI5HZJTYYWHGXTJMGYJQVV&v=20131227&limit=10";
+$url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=FOURSQUARE_ACCESS_TOKEN&v=20131227&limit=10";
 
 // Get and encode json object from foursquare.
 $result = foursquare_map_fetch_data($url);
@@ -33,7 +33,8 @@ $location = $result->response->checkins->items[0]->venue->location;
       #map-canvas { height: 100% }
     </style>
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5M5EF9NVTFgN9Zu6TxUt-721fOEjLkaQ&sensor=false">
+      <!-- EDIT THIS LINK TO USE YOUR API KEY!!! -->
+      src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&sensor=false">
     </script>
     <script type="text/javascript">
       function initialize() {
